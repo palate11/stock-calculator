@@ -15,14 +15,14 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React HELLO HI
+          Learn React HELLO H
 
           sldkjfaskldjf
           alskdjf
 
           alskdjfs
 
-          <b>hello</b>
+          <b></b>
         </a>
       </header>
     </div>
