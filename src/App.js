@@ -15,12 +15,18 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React HELLO H
+          Benjamin Graham equation 
 
-          sldkjfaskldjf
-          alskdjf
+          V = ((EPS*(8.5+2g)*4.4)/(Y))
+         
 
-          alskdjfs
+          EPS = Earning per share "\n"
+          Expected annual growth rate (2 over 7-10 years)= g "\n"
+          Corporate bond yield 'risk free rate' (Y)
+          8.5 price to Earnings Ratio for a no growth company 
+         
+          intrinsic value per share = V
+          Margin of safty % = 
 
           <b></b>
         </a>
