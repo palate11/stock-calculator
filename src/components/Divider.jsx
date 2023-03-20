@@ -2,6 +2,10 @@
  * Make 3 text fields
  * - Text Field 1 and 2 are the numbers to be divided
  * - Text Field 3 is the result
+ *
+ * - Since this is division, please add a text field showing the remainder
+ *   (hint: you will to learn about modulo operator '%')
+ *
  * Add a button that says "Calculate" and can be clicked
  */
 
@@ -15,7 +19,7 @@ const Divider = props => {
   const [result, setResult] = useState(0)
 
   const calculate = () => {
-    const result = parseInt(number1) * parseInt(number2)
+    const result = parseInt(number1) / parseInt(number2)
     setResult(result)
   }
 
