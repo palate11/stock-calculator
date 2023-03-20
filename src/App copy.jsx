@@ -8,31 +8,19 @@ import InboxIcon from '@material-ui/icons/Inbox'
 import { useState } from 'react'
 import Multiplier from './components/Multiplier'
 
-function countInitial() {
-  //speeding up computation from inisial state
-  console.log('run function')
-}
-
 function App() {
-  // Have to use a function to use a Hook also Hooks must be first - no if functions loops nested in nothing
-  const [number1, setNumber1] = useState(0) //Hook  Number (current state) setNumber (update current state) 'Use state (0) defult state
+  const [number1, setNumber1] = useState(0)
   const [number2, setNumber2] = useState(0)
   const [sum, setSum] = useState(0)
   const [whatever, setWhatever] = useState('whatever')
 
-  const Multiplier = props => {
-    const [number1, setNumber1] = useState(0)
-
-    return <div>hellow</div>
-  }
-
   const calculate = () => {
-    const newSum = parseInt(number1) * parseInt(number2)
+    const newSum = parseInt(number1) + parseInt(number2)
     setSum(newSum)
   }
 
   const update1 = event => {
-    const { value } = event.targetS
+    const { value } = event.target
     setNumber1(value)
   }
 
