@@ -68,7 +68,7 @@ const Divider = props => {
       </div>
 
       <Button variant="contained" color="primary" onClick={calculate}>
-        Calculate
+        Calculate!
       </Button>
     </div>
   )
