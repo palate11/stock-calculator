@@ -1,6 +1,6 @@
 /**
  * Make 3 text fields
- * - Text Field 1 and 2 are the numbers to be multiplied
+ * - Text Field 1 and 2 are the numbers to be divided
  * - Text Field 3 is the result
  * Add a button that says "Calculate" and can be clicked
  */
