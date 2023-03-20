@@ -20,6 +20,7 @@ export default function App() {
             parent route elements. See the note about <Outlet> below. */}
       <Routes>
         <Route path="/" element={<Layout />}>
+          {/* Add more routes here */}
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="dashboard" element={<Dashboard />} />
@@ -44,6 +45,8 @@ function Layout() {
     <div>
       {/* A "layout route" is a good place to put markup you want to
           share across all the pages on your site, like navigation. */}
+
+      {/* Add more links to the menu here */}
       <nav>
         <ul>
           <li>
