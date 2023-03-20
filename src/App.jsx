@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import Multiplier from './components/Multiplier'
+import Divider from './components/Divider'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="multiply" element={<Multiplier />} />
+          <Route path="divide" element={<Divider />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
@@ -55,6 +57,9 @@ function Layout() {
           </li>
           <li>
             <Link to="/multiply">Multiply</Link>
+          </li>
+          <li>
+            <Link to="/divide">Divide</Link>
           </li>
           <li>
             <Link to="/nothing-here">Nothing Here</Link>
