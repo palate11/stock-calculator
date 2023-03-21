@@ -17,12 +17,16 @@ const Divider = props => {
   const [number1, setNumber1] = useState(0)
   const [number2, setNumber2] = useState(0)
   const [result, setResult] = useState(0)
+  const [result2, setResult2] = useState(0)
 
   const calculate = () => {
     const result = parseInt(number1) / parseInt(number2)
     setResult(result)
   }
-
+  const calculate2 = () => {
+    const result = parseInt(number1) % parseInt(number2)
+    setResult2(result2)
+  }
   const update1 = event => {
     const { value } = event.target
     setNumber1(value)
@@ -44,6 +48,7 @@ const Divider = props => {
         <TextField
           id="outlined-basic"
           variant="outlined"
+          bf
           value={number1}
           onChange={e => update1(e)}
           size="small"
@@ -65,6 +70,11 @@ const Divider = props => {
       <br />
       <div>
         Quotient: <TextField id="outlined-basic" variant="outlined" value={result} size="small" />
+      </div>
+
+      <br />
+      <div>
+        Modulus: <TextField id="outlined-basic" variant="outlined" value={result2} size="small" />
       </div>
 
       <Button variant="contained" color="primary" onClick={calculate}>
