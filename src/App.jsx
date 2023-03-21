@@ -2,11 +2,12 @@ import * as React from 'react'
 import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import Multiplier from './components/Multiplier'
 import Divider from './components/Divider'
+import './App.css'
 
 export default function App() {
   return (
-    <div>
-      <h1>Basic Example</h1>
+    <div id="background">
+      <h1>Math Page</h1>
 
       <p>
         This example demonstrates some of the core features of React Router including nested{' '}
