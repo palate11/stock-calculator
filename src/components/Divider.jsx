@@ -19,11 +19,11 @@ const Divider = props => {
   const [result, setResult] = useState(0)
   const [result2, setResult2] = useState(0)
 
-  const calculate2 = () => {
+  const calculate = () => {
     const result = parseInt(number1) / parseInt(number2)
     setResult(result)
   }
-  const calculate = () => {
+  const calculate2 = () => {
     const result2 = parseInt(number1) % parseInt(number2)
     setResult2(result2)
   }
@@ -37,9 +37,10 @@ const Divider = props => {
     setNumber2(value)
   }
 
-  // console.log('number1: ' + number1)
-  // console.log('number2: ' + number2)
-  // console.log('result: ' + result)
+  console.log('number1: ' + number1)
+  console.log('number2: ' + number2)
+  console.log('result: ' + result)
+  console.log('result2' + result2)
 
   return (
     <div>
@@ -77,8 +78,15 @@ const Divider = props => {
         Modulus: <TextField id="outlined-basic" variant="outlined" value={result2} size="small" />
       </div>
 
-      <Button variant="contained" color="primary" onClick={calculate2}>
-        Calculate quotient!!
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => {
+          calculate()
+          calculate2()
+        }}
+      >
+        Calculate!!
       </Button>
     </div>
   )
