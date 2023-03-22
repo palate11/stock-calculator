@@ -20,11 +20,11 @@ const Divider = props => {
   const [remainder, setRemainder] = useState(0)
 
   const getquotient = () => {
-    const quotient = parseInt(number1) / parseInt(number2)
+    const quotient = Math.floor(parseInt(number1) / parseInt(number2))
     setQuotient(quotient)
   }
   const getmodulus = () => {
-    const remainder = parseInt(number1) % parseInt(number2)
+    const remainder = Math.floor(parseInt(number1) % parseInt(number2))
     setRemainder(remainder)
   }
   const update1 = event => {
