@@ -29,7 +29,7 @@ const Subtract = props => {
   return (
     <div>
       <div>
-        A:{' '}
+        Subtrahend:{' '}
         <TextField
           id="outlined-basic"
           variant="outlined"
@@ -41,7 +41,7 @@ const Subtract = props => {
 
       <br />
       <div>
-        B:{' '}
+        Minuend:{' '}
         <TextField
           id="outlined-basic"
           variant="outlined"
@@ -53,7 +53,7 @@ const Subtract = props => {
 
       <br />
       <div>
-        Result: <TextField id="outlined-basic" variant="outlined" value={result} size="small" />
+        Difference: <TextField id="outlined-basic" variant="outlined" value={result} size="small" />
       </div>
 
       <Button variant="contained" color="primary" onClick={calculate}>
