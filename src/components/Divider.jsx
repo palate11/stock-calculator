@@ -19,11 +19,11 @@ const Divider = props => {
   const [quotient, setQuotient] = useState(0)
   const [remainder, setRemainder] = useState(0)
 
-  const getquotient = () => {
+  const getQuotient = () => {
     const quotient = Math.floor(parseInt(number1) / parseInt(number2))
     setQuotient(quotient)
   }
-  const getmodulus = () => {
+  const getModulus = () => {
     const remainder = Math.floor(parseInt(number1) % parseInt(number2))
     setRemainder(remainder)
   }
@@ -82,8 +82,8 @@ const Divider = props => {
         variant="contained"
         color="primary"
         onClick={() => {
-          getquotient()
-          getmodulus()
+          getQuotient()
+          getModulus()
         }}
       >
         Calculate!

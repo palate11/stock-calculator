@@ -4,7 +4,7 @@ import Multiplier from './components/Multiplier'
 import Divider from './components/Divider'
 import './App.css'
 import Subtract from './components/Subtract'
-import intrinsicCalculator from './components/IntrinsicCalculator'
+import IntrinsicCalculator from './components/IntrinsicCalculator'
 
 export default function App() {
   return (
@@ -29,7 +29,7 @@ export default function App() {
           <Route path="subtract" element={<Subtract />} />
           <Route path="multiply" element={<Multiplier />} />
           <Route path="divide" element={<Divider />} />
-          <Route path="intrinsicCalculator" element={<intrinsicCalculator />} />
+          <Route path="intrinsicCalculator" element={<IntrinsicCalculator />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
@@ -69,7 +69,7 @@ function Layout() {
             <Link to="/divide">Divide</Link>
           </li>
           <li>
-            <Link to="/intrinsic_calculator">Intrinsic_Calculator</Link>
+            <Link to="/intrinsicCalculator">Intrinsic Calculator</Link>
           </li>
         </ul>
       </nav>
