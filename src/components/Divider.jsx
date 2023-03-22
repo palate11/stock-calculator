@@ -1,7 +1,7 @@
 /**
  * Make 3 text fields
  * - Text Field 1 and 2 are the numbers to be divided
- * - Text Field 3 is the result
+ * - Text Field 3 is the quotient
  *
  * - Since this is division, please add a text field showing the remainder
  *   (hint: you will to learn about modulo operator '%')
@@ -16,14 +16,14 @@ import Button from '@material-ui/core/Button'
 const Divider = props => {
   const [number1, setNumber1] = useState(0)
   const [number2, setNumber2] = useState(0)
-  const [result, setResult] = useState(0)
+  const [quotient, setQuotient] = useState(0)
   const [remainder, setRemainder] = useState(0)
 
-  const calculate = () => {
-    const result = parseInt(number1) / parseInt(number2)
-    setResult(result)
+  const getquotient = () => {
+    const quotient = parseInt(number1) / parseInt(number2)
+    setQuotient(quotient)
   }
-  const calculate2 = () => {
+  const getmodulus = () => {
     const remainder = parseInt(number1) % parseInt(number2)
     setRemainder(remainder)
   }
@@ -39,13 +39,13 @@ const Divider = props => {
 
   console.log('number1: ' + number1)
   console.log('number2: ' + number2)
-  console.log('result: ' + result)
+  console.log('quotient: ' + quotient)
   console.log('remainder' + remainder)
 
   return (
     <div>
       <div>
-        A:{' '}
+        Dividend:{' '}
         <TextField
           id="outlined-basic"
           variant="outlined"
@@ -58,7 +58,7 @@ const Divider = props => {
 
       <br />
       <div>
-        B:{' '}
+        Divisor:{' '}
         <TextField
           id="outlined-basic"
           variant="outlined"
@@ -70,7 +70,7 @@ const Divider = props => {
 
       <br />
       <div>
-        Quotient: <TextField id="outlined-basic" variant="outlined" value={result} size="small" />
+        Quotient: <TextField id="outlined-basic" variant="outlined" value={quotient} size="small" />
       </div>
 
       <br />
@@ -82,11 +82,11 @@ const Divider = props => {
         variant="contained"
         color="primary"
         onClick={() => {
-          calculate()
-          calculate2()
+          getquotient()
+          getmodulus()
         }}
       >
-        Calculate!!
+        Calculate!
       </Button>
     </div>
   )
