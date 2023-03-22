@@ -3,6 +3,7 @@ import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import Multiplier from './components/Multiplier'
 import Divider from './components/Divider'
 import './App.css'
+import Subtract from './components/Subtract'
 
 export default function App() {
   return (
@@ -24,7 +25,7 @@ export default function App() {
           {/* Add more routes here */}
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="subtract" element={<Subtract />} />
           <Route path="multiply" element={<Multiplier />} />
           <Route path="divide" element={<Divider />} />
 
@@ -57,7 +58,7 @@ function Layout() {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/subtract">Subtract</Link>
           </li>
           <li>
             <Link to="/multiply">Multiply</Link>
@@ -97,10 +98,10 @@ function About() {
   )
 }
 
-function Dashboard() {
+function subtract() {
   return (
     <div>
-      <h2>Dashboard</h2>
+      <h2>Subtract</h2>
     </div>
   )
 }
