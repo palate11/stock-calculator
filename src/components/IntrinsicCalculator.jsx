@@ -41,25 +41,29 @@ const IntrinsicCalculator = props => {
 
   const [eps, setEps] = useState(0)
   const [growth, setGrowth] = useState(0)
-  const [yrs, setYrs] = useState(0)
+  const [tenYearBondRate, setTenYearBondRate] = useState(0)
   const [result, setResult] = useState(0)
 
   const calculate = () => {
-    const result = ((eps * (8.5 + 2 * growth * 4)) / yrs).toFixed(2)
+    const result = ((eps * (8.5 + 2 * growth * 4)) / tenYearBondRate).toFixed(2)
     setResult(result)
   }
+
   const updateEps = event => {
     const { value } = event.target
     setEps(value)
   }
+
   const updateGrowth = event => {
     const { value } = event.target
     setGrowth(value)
   }
-  const updateYrs = event => {
+
+  const updateTenYearBondRate = event => {
     const { value } = event.target
-    setYrs(value)
+    setTenYearBondRate(value)
   }
+
   return (
     <div>
       {/* <Paper className={classes.paper}>PAPER TEST</Paper> */}
@@ -95,8 +99,8 @@ const IntrinsicCalculator = props => {
         <TextField
           id="outlined-basic"
           variant="outlined"
-          value={yrs}
-          onChange={e => updateYrs(e)}
+          value={tenYearBondRate}
+          onChange={e => updateTenYearBondRate(e)}
           size="small"
         />
       </div>

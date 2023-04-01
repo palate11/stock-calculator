@@ -68,3 +68,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Two Sum
+
+```
+var twoSum = function(nums, target) {
+    let sum = 0
+    let result = []
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i; j < nums.length; j++) {
+            const one = nums[i]
+            const two = nums[j]
+            if (one + two === target) {
+                result.push(i)
+                result.push(j)
+            }
+        }
+    }
+
+    return result
+};
+```
