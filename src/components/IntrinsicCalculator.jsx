@@ -31,6 +31,7 @@ const useStyles = makeStyles(
       alignItems: 'center',
       fontWeight: 'bold',
       minWidth: theme.spacing(20),
+      color: 'red',
     },
   }),
   { name: 'IntrinsicCalculator' }
