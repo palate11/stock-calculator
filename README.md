@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+## Intrinsic Value Formula
+
+![image](https://user-images.githubusercontent.com/128103117/229264067-d92a89a1-b4d1-483d-9570-a25712bd80a8.png)
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
