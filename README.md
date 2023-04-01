@@ -1,5 +1,8 @@
 ## Intrinsic Value Formula
 
+![image](https://user-images.githubusercontent.com/128103117/229264155-d9bde9d4-1bbe-4a0d-8eb8-97d5242c7384.png)
+
+
 ![image](https://user-images.githubusercontent.com/128103117/229264067-d92a89a1-b4d1-483d-9570-a25712bd80a8.png)
 
 
