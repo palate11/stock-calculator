@@ -1,8 +1,44 @@
 import { useState } from 'react'
-import TextField from '@material-ui/core/TextField'
-import Button from '@material-ui/core/Button'
+
+import { makeStyles } from '@material-ui/core/styles'
+import {
+  Button,
+  // Paper,
+  TextField,
+} from '@material-ui/core'
+
+const useStyles = makeStyles(
+  theme => ({
+    root: {},
+
+    paper: {
+      color: 'blue',
+      backgroundColor: 'red',
+    },
+
+    formRow: {
+      display: 'flex',
+      flex: 1,
+      // flexDirection: 'column',
+      maxWidth: '50%',
+      marginLeft: theme.spacing(2),
+      marginBottom: theme.spacing(2),
+    },
+
+    fieldName: {
+      display: 'flex',
+      flex: 1,
+      alignItems: 'center',
+      fontWeight: 'bold',
+      minWidth: theme.spacing(20),
+    },
+  }),
+  { name: 'IntrinsicCalculator' }
+)
 
 const IntrinsicCalculator = props => {
+  const classes = useStyles(props)
+
   const [eps, setEps] = useState(0)
   const [growth, setGrowth] = useState(0)
   const [yrs, setYrs] = useState(0)
@@ -26,30 +62,34 @@ const IntrinsicCalculator = props => {
   }
   return (
     <div>
-      <div>
-        EPS:{' '}
-        <TextField
-          id="outlined-basic"
-          variant="outlined"
-          value={eps}
-          onChange={e => updateEps(e)}
-          size="small"
-        />
+      {/* <Paper className={classes.paper}>PAPER TEST</Paper> */}
+      <div className={classes.formRow}>
+        <div className={classes.fieldName}>EPS:</div>
+        <div className={classes.fieldContainer}>
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
+            value={eps}
+            onChange={e => updateEps(e)}
+            size="small"
+          />
+        </div>
       </div>
 
-      <br />
-      <div>
-        Growth Rate:{' '}
-        <TextField
-          id="outlined-basic"
-          variant="outlined"
-          value={growth}
-          onChange={e => updateGrowth(e)}
-          size="small"
-        />
+      <div className={classes.formRow}>
+        <div className={classes.fieldName}>Growth Rate:</div>
+        <div className={classes.fieldContainer}>
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
+            value={growth}
+            onChange={e => updateGrowth(e)}
+            size="small"
+          />
+        </div>
       </div>
 
-      <br />
+      {/* TODO: Fix the rest of these fields to be stylized more pretty like the ones above */}
       <div>
         10 years government bond:{' '}
         <TextField
@@ -61,11 +101,10 @@ const IntrinsicCalculator = props => {
         />
       </div>
 
-      <br />
       <div>
-        Result: <TextField id="outlined-basic" variant="outlined" value={result} size="small" />
+        stock intrinsic value:{' '}
+        <TextField id="outlined-basic" variant="outlined" value={result} size="small" />
       </div>
-
       <Button variant="contained" color="primary" onClick={calculate}>
         Calculate
       </Button>
