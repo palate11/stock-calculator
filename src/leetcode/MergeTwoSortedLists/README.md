@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/128103117/229266646-1722118d-4775-4354-a0a9-d5eebb41ffe6.png)
+
+
 ```
 var mergeTwoLists = function(list1, list2, level = 0) {
   console.log("")
