@@ -95,17 +95,18 @@ const IntrinsicCalculator = props => {
       </div>
 
       {/* TODO: Fix the rest of these fields to be stylized more pretty like the ones above */}
-      <div>
-        10 years government bond:{' '}
-        <TextField
-          id="outlined-basic"
-          variant="outlined"
-          value={tenYearBondRate}
-          onChange={e => updateTenYearBondRate(e)}
-          size="small"
-        />
+      <div className={classes.formRow}>
+        <div className={classes.fieldName}>10 years government bond:</div>
+        <div className={classes.fieldContainer}>
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
+            value={tenYearBondRate}
+            onChange={e => updateTenYearBondRate(e)}
+            size="small"
+          />
+        </div>
       </div>
-
       <div>
         stock intrinsic value:{' '}
         <TextField id="outlined-basic" variant="outlined" value={result} size="small" />
