@@ -31,7 +31,7 @@ const useStyles = makeStyles(
       alignItems: 'center',
       fontWeight: 'bold',
       minWidth: theme.spacing(20),
-      color: 'red',
+      color: '#33834b',
     },
   }),
   { name: 'IntrinsicCalculator' }
@@ -96,7 +96,7 @@ const IntrinsicCalculator = props => {
 
       {/* TODO: Fix the rest of these fields to be stylized more pretty like the ones above */}
       <div className={classes.formRow}>
-        <div className={classes.fieldName}>10 years government bond:</div>
+        <div className={classes.fieldName}>10 Years Government Bond:</div>
         <div className={classes.fieldContainer}>
           <TextField
             id="outlined-basic"
@@ -108,12 +108,18 @@ const IntrinsicCalculator = props => {
         </div>
       </div>
       <div>
-        stock intrinsic value:{' '}
-        <TextField id="outlined-basic" variant="outlined" value={result} size="small" />
+        <div className={classes.formRow}>
+          <div className={classes.fieldName}>Stock Intrinsic Value: </div>
+          <div className={classes.fieldContainer}>
+            <TextField id="outlined-basic" variant="outlined" value={result} size="small" />
+          </div>
+        </div>
+        <div className={classes.formRow}>
+          <Button variant="contained" color="primary" onClick={calculate}>
+            Calculate
+          </Button>
+        </div>
       </div>
-      <Button variant="contained" color="primary" onClick={calculate}>
-        Calculate
-      </Button>
     </div>
   )
 }
